@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "274c0e44-6c25-4863-833b-b71d822e4560",
+		"name": "PruebaLugares",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38690008"
+	},
+	"item": [
+		{
+			"name": "ListarLugares",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/place/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarUnLugar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/place/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearUnLugar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"name\": \"El Corimbo\",\r\n    \"address\": \"Avenida de Palomares\",\r\n    \"coords\": \"-122.14257 54.45421\",\r\n    \"desc\": \"Cafetería local localizada al lado del parque central\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/place/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarUnLugar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"El pizkito\",\r\n    \"address\": \"Calle Santander\",\r\n    \"coords\": \"41,33521 -541.23442\",\r\n    \"desc\": \"Bocateria local en San Juan De Aznalfarache\",\r\n    \"tags\": [],\r\n    \"image\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/place/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarUnLugar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/place/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarTag",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/place/1/tag/add/bocatas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						"1",
+						"tag",
+						"add",
+						"bocatas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarTag",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/place/1/tag/del/bocatas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"place",
+						"1",
+						"tag",
+						"del",
+						"bocatas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
